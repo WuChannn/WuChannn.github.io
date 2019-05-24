@@ -16,13 +16,14 @@
 
 
 <meta name="description" content="Opencv ImportError: No module named cv21python -m pip install opencv-python   Numpy 根据类别划分数据集12X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    #test dataset">
+<meta name="keywords" content="学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Instructions">
 <meta property="og:url" content="http://wuchannn.github.io/2019/03/18/Instructions/index.html">
 <meta property="og:site_name" content="Hello LIFE">
 <meta property="og:description" content="Opencv ImportError: No module named cv21python -m pip install opencv-python   Numpy 根据类别划分数据集12X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    #test dataset">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-27T13:52:43.742Z">
+<meta property="og:updated_time" content="2019-05-24T13:01:09.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Instructions">
 <meta name="twitter:description" content="Opencv ImportError: No module named cv21python -m pip install opencv-python   Numpy 根据类别划分数据集12X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    #test dataset">
@@ -298,6 +299,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -310,7 +315,7 @@
 </li>
 </ul>
 <h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><ul>
-<li><code>根据类别划分数据集</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    <span class="meta">#</span><span class="bash"><span class="built_in">test</span> dataset</span>test_idx_0 = np.where(Y==0)test_idx_1 = np.where(Y==1)test_idx = np.append(test_idx_0,test_idx_1)X_test = X[test_idx]Y_test = Y[test_idx]    enc = OneHotEncoder(sparse=False)Y_test = enc.fit_transform(np.array(Y_test).reshape(-1,1))    <span class="meta">#</span><span class="bash">train and val dataset</span>train_val_idx = np.where(Y!=0)</span><br><span class="line">X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]train_val_idx = np.where(Y!=1)X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]<span class="meta">#</span><span class="bash">train and val split</span>X_train, X_val, Y_train, Y_val = \       train_test_split(X_train_val, Y_train_val, test_size=0.2)        Y_train = enc.fit_transform(np.array(Y_train).reshape(-1,1)) Y_val = enc.fit_transform(np.array(Y_val).reshape(-1,1))</span><br></pre></td></tr></table></figure></li>
+<li><code>根据类别划分数据集</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    <span class="meta">#</span>test datasettest_idx_0 = np.where(Y==0)test_idx_1 = np.where(Y==1)test_idx = np.append(test_idx_0,test_idx_1)X_test = X[test_idx]Y_test = Y[test_idx]    enc = OneHotEncoder(sparse=False)Y_test = enc.fit_transform(np.array(Y_test).reshape(-1,1))    <span class="meta">#</span>train and val datasettrain_val_idx = np.where(Y!=0)</span><br><span class="line">X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]train_val_idx = np.where(Y!=1)X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]<span class="meta">#</span>train and val splitX_train, X_val, Y_train, Y_val = \       train_test_split(X_train_val, Y_train_val, test_size=0.2)        Y_train = enc.fit_transform(np.array(Y_train).reshape(-1,1)) Y_val = enc.fit_transform(np.array(Y_val).reshape(-1,1))</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -323,7 +328,7 @@
         <p><span>本文标题:</span><a href="/2019/03/18/Instructions/">Instructions</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Chan Wu</a></p>
         <p><span>发布时间:</span>2019-03-18, 19:46:05</p>
-        <p><span>最后更新:</span>2019-03-27, 21:52:43</p>
+        <p><span>最后更新:</span>2019-05-24, 21:01:09</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/03/18/Instructions/" title="Instructions">http://wuchannn.github.io/2019/03/18/Instructions/</a>
             <span class="copy-path" data-clipboard-text="原文: http://wuchannn.github.io/2019/03/18/Instructions/　　作者: Chan Wu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
