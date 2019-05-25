@@ -392,6 +392,72 @@
 
 
   
+    <article id="post-Instructions" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/03/18/Instructions/" class="article-date">
+      <time datetime="2019-03-18T11:46:05.000Z" itemprop="datePublished">2019-03-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/18/Instructions/">Instructions</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Opencv"><a href="#Opencv" class="headerlink" title="Opencv"></a>Opencv</h2><ul>
+<li><code>ImportError: No module named cv2</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install opencv-python</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><ul>
+<li><code>根据类别划分数据集</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    <span class="meta">#</span>test datasettest_idx_0 = np.where(Y==0)test_idx_1 = np.where(Y==1)test_idx = np.append(test_idx_0,test_idx_1)X_test = X[test_idx]Y_test = Y[test_idx]    enc = OneHotEncoder(sparse=False)Y_test = enc.fit_transform(np.array(Y_test).reshape(-1,1))    <span class="meta">#</span>train and val datasettrain_val_idx = np.where(Y!=0)</span><br><span class="line">X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]train_val_idx = np.where(Y!=1)X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]<span class="meta">#</span>train and val splitX_train, X_val, Y_train, Y_val = \       train_test_split(X_train_val, Y_train_val, test_size=0.2)        Y_train = enc.fit_transform(np.array(Y_train).reshape(-1,1)) Y_val = enc.fit_transform(np.array(Y_val).reshape(-1,1))</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Deep-Learning" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -492,72 +558,6 @@
 <li>智能将下沉到终端设备，智能边缘计算将会崛起。</li>
 <li><em>在计算机视觉和语义识别等应用只中，终端采集数据，然后上传到云端处理的云计算对网络带宽和数据中心存储都带来了越来越大的挑战</em></li>
 <li><em>无人驾驶等应用对实时性和安全性要求极高，网络的时延与稳定性带来的安全隐患是无人驾驶等应用无法忍受的。</em></li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Instructions" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/03/18/Instructions/" class="article-date">
-      <time datetime="2019-03-18T11:46:05.000Z" itemprop="datePublished">2019-03-18</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/18/Instructions/">Instructions</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="Opencv"><a href="#Opencv" class="headerlink" title="Opencv"></a>Opencv</h2><ul>
-<li><code>ImportError: No module named cv2</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install opencv-python</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><ul>
-<li><code>根据类别划分数据集</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    <span class="meta">#</span>test datasettest_idx_0 = np.where(Y==0)test_idx_1 = np.where(Y==1)test_idx = np.append(test_idx_0,test_idx_1)X_test = X[test_idx]Y_test = Y[test_idx]    enc = OneHotEncoder(sparse=False)Y_test = enc.fit_transform(np.array(Y_test).reshape(-1,1))    <span class="meta">#</span>train and val datasettrain_val_idx = np.where(Y!=0)</span><br><span class="line">X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]train_val_idx = np.where(Y!=1)X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]<span class="meta">#</span>train and val splitX_train, X_val, Y_train, Y_val = \       train_test_split(X_train_val, Y_train_val, test_size=0.2)        Y_train = enc.fit_transform(np.array(Y_train).reshape(-1,1)) Y_val = enc.fit_transform(np.array(Y_val).reshape(-1,1))</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
