@@ -35,7 +35,7 @@
 
 
 
-    <link rel="shortcut icon" href="/img/james.png">
+    <link rel="shortcut icon" href="/img/james1.png">
 
 
 
@@ -159,6 +159,8 @@
                     <nav class="header-menu">
                         <ul>
                         
+                            <li><a href="/">主页</a></li>
+                        
                             <li><a href="/archives/">文章</a></li>
                         
                             <li><a href="/tags/">标签</a></li>
@@ -193,6 +195,8 @@
                 
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
                     
                       <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
                     
@@ -233,6 +237,8 @@
             
             <nav class="header-menu">
                 <ul>
+                
+                    <li><a href="/">主页</a></li>
                 
                     <li><a href="/archives/">文章</a></li>
                 
@@ -305,7 +311,7 @@
 </li>
 </ul>
 <h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><ul>
-<li><code>根据类别划分数据集</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    <span class="meta">#</span>test datasettest_idx_0 = np.where(Y==0)test_idx_1 = np.where(Y==1)test_idx = np.append(test_idx_0,test_idx_1)X_test = X[test_idx]Y_test = Y[test_idx]    enc = OneHotEncoder(sparse=False)Y_test = enc.fit_transform(np.array(Y_test).reshape(-1,1))    <span class="meta">#</span>train and val datasettrain_val_idx = np.where(Y!=0)</span><br><span class="line">X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]train_val_idx = np.where(Y!=1)X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]<span class="meta">#</span>train and val splitX_train, X_val, Y_train, Y_val = \       train_test_split(X_train_val, Y_train_val, test_size=0.2)        Y_train = enc.fit_transform(np.array(Y_train).reshape(-1,1)) Y_val = enc.fit_transform(np.array(Y_val).reshape(-1,1))</span><br></pre></td></tr></table></figure></li>
+<li><code>根据类别划分数据集</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    <span class="meta">#</span><span class="bash"><span class="built_in">test</span> dataset</span>test_idx_0 = np.where(Y==0)test_idx_1 = np.where(Y==1)test_idx = np.append(test_idx_0,test_idx_1)X_test = X[test_idx]Y_test = Y[test_idx]    enc = OneHotEncoder(sparse=False)Y_test = enc.fit_transform(np.array(Y_test).reshape(-1,1))    <span class="meta">#</span><span class="bash">train and val dataset</span>train_val_idx = np.where(Y!=0)</span><br><span class="line">X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]train_val_idx = np.where(Y!=1)X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]<span class="meta">#</span><span class="bash">train and val split</span>X_train, X_val, Y_train, Y_val = \       train_test_split(X_train_val, Y_train_val, test_size=0.2)        Y_train = enc.fit_transform(np.array(Y_train).reshape(-1,1)) Y_val = enc.fit_transform(np.array(Y_val).reshape(-1,1))</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -459,6 +465,8 @@
 </footer>
     </div>
     
+    <script src="/js/GithubRepoWidget.js"></script>
+
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
     <script>
@@ -511,7 +519,7 @@ MathJax.Hub.Queue(function() {
     // Open in New Window
     
         var oOpenInNew = {
-            
+             github: ".github-widget a", 
             
             
             
