@@ -382,10 +382,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>2019-3-22<br>  回来的车上，我一直在想，如果当年追着那个小女孩的老头真的是人贩子的话，我想我会后悔一生。“应该不是吧，这么久也没有听说过有人贩子在大学城出没。”我就这样麻醉自己，利用自己的闭塞的消息通道来劝慰自己。我知道这句话经不起推敲，毕竟真正的黑暗是摆在我们普通人的眼前，我们依然会被它的深邃所迷惑。我只有祈祷，祈祷这个世界变得更加美好；我只有祈祷，祈祷下次再遇见类似事件时，自己能够有勇气摒弃路人冷眼旁观时的说辞，鼓起勇气弄清真相。</p>
-
+              <p><excerpt in index | 首页摘要><br>一些感悟！<br>
+          
       
-    </div>
+    </excerpt></p></div>
     
     <div class="article-info article-info-index">
       
@@ -396,6 +396,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2019/03/22/云念/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -451,81 +455,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h2><ul>
-<li>Hadamard乘积（元素对应相乘）：C=${A}\bigodot{B}$</li>
-</ul>
-<h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><ul>
-<li>深度学习模型往往善于与训练数据拟合，但真正的挑战是泛化，而非拟合。</li>
-</ul>
-<h2 id="Zero-Shot-Learning"><a href="#Zero-Shot-Learning" class="headerlink" title="Zero-Shot Learning"></a>Zero-Shot Learning</h2><ul>
-<li>The underlying secret ensuring the success of zero-shot learning is to find an intermediate semantic representation (e.g. attributes or textual features) to transfer the knowledge learned from seen classes to unseen ones.(M. Elhoseiny, Y. Zhu, H. Zhang, and A. Elgammal. Link the head to the ”beak”: Zero shot learning from noisy text description at part precision. In CVPR, July 2017.)</li>
-<li>provide the intra-class diversity while keeping inter-class discrimination for unseen novel classes. </li>
-</ul>
-<h2 id="工业相机"><a href="#工业相机" class="headerlink" title="工业相机"></a>工业相机</h2><p><a href="http://www.51camera.com.cn/uploadfile//2018/0207/20180207015631933.pdf" target="_blank" rel="noopener">视觉工程师必须知道的工业相机50问</a><br>1.丢帧：该问题的出现与传输接口无关。设计不完善的驱动程序或工业相机硬件才是丢帧的真正原因。</p>
-<ul>
-<li>丢帧的实质：无法及时处理数据通道的堵塞问题。新的图像进来时，前一张可能被迫丢弃，或是新的图像被迫丢弃。</li>
-<li>问题解决：针对驱动程序与工业相机的数据传输等硬件上的每个环节进行精密设计。</li>
-</ul>
-<p>2.CCD与CMOS相机</p>
-<ul>
-<li>二者的图像传感器光电转换原理相同，主要的差别在于信号的读出过程不同：CCD仅有一个或少数几个输出节点统一读出，信号的输出一致性非常好；CMOS每个像素都有各自的信号放大器，各自进行电荷-电压的转换，信号输出一致性较差。</li>
-<li>CMOS比CCD芯片的功耗要低，但是放大器的不一致性却带来了更高的固定噪声。</li>
-<li>CMOS芯片的集成度更高，芯片级相机。</li>
-</ul>
-<p>3.分辨率</p>
-<ul>
-<li>芯片靶面排列的像元数量：H x V</li>
-<li>对同样大的视场（景物范围）成像时，分辨率越高，对细节的展示越明显</li>
-</ul>
-<p>4.帧频和行频</p>
-<ul>
-<li>面阵相机用帧频表示，fps</li>
-<li>线阵相机用行频表示，KHz</li>
-</ul>
-<p>5.噪声</p>
-<ul>
-<li>成像过程中不希望被采集到的、实际成像目标外的信号</li>
-<li>有效信号带来的符合泊松分布的统计涨落噪声</li>
-<li>相机自身固有的与信号无关的噪声</li>
-</ul>
-<p>6.工业相机与普通数码相机</p>
-<ul>
-<li>工业相机快门时间特别短，能清晰地抓拍快速移动的物体，而普通相机抓拍快速移动的物体非常模糊</li>
-<li>工业相机的图像传感器是逐行扫描的，而普通相机的是隔行扫描</li>
-<li>拍摄速度</li>
-<li>工业相机输出的是裸数据，光谱范围也更宽，比较适合进行高质量的图像处理算法，普遍应用于机器视觉系统中；而普通相机的光谱范围只适合人眼视觉，并且经过了MPEG压缩，图像质量较差。</li>
-</ul>
-<p>7.线阵相机</p>
-<ul>
-<li>线扫描传感器只有一行感光单元，每次只采集一行图像，每次只输出一行图像</li>
-<li>线阵相机的采集速度很快，用户可以选择每几行或者每十几行构成一帧图像进行处理，因此可以达到很高的帧率</li>
-</ul>
-<p>8.CCD与CMOS芯片的主要参数</p>
-<ul>
-<li>像元尺寸反映了芯片对光的响应能力，像元尺寸越大，能够接收到的光子数量越多，在同样的光照条件和曝光时间内产生的电荷数量越多</li>
-<li>灵敏度：光器件的光电转换能力；器件所能传感的对地辐射功率</li>
-<li>坏点率</li>
-<li>光谱响应：芯片对于不同波长光线的响应能力，通常用光谱响应曲线给出</li>
-</ul>
-<h2 id="AI芯片"><a href="#AI芯片" class="headerlink" title="AI芯片"></a>AI芯片</h2><ul>
-<li>CPU：大部分面积被控制单元和缓存单元占据，只有少量的计算单元。指令执行过程包括取指令、指令译码和指令执行三部分。只有在指令执行时，计算单元才能发挥作用。串行计算</li>
-<li>GPU：并行计算。指令执行过程如CPU一样包括三部分，因此制约了GPU计算能力</li>
-<li>FPGA：现场可编程逻辑门阵列。算法即电路的芯片，接近I/O的高性能、低功耗芯片。硬件电路由算法定制，不需要取指令和指令译码的过程。可以重复编程</li>
-<li>ASIC：专用集成电路。算法即电路，不需要取指令和指令译码的过程。为特定的需求而专门定制的芯片，能够最大程度的发挥芯片的计算能力。ASIC设计制造一旦完成，就无法进行改变。</li>
-<li>四者能效：ASIC&gt;FPGA&gt;GPU&gt;CPU，通用性则相反</li>
-<li>在云端模型训练中，GPU占主导地位，多GPU并行架构是云端训练常用的基础架构方案。</li>
-<li>在云端识别中，基于功耗与运算速度的考量，单独基于GPU的方式并非最优方案，利用CPU、GPU、FPGA、ASIC各自的优点采用异构计算（CPU+GPU+FPGA/ASIC）是目前主流的方案。</li>
-</ul>
-<h2 id="边缘计算"><a href="#边缘计算" class="headerlink" title="边缘计算"></a>边缘计算</h2><ul>
-<li>在终端采集数据，并在终端完成数据处理，提供智能终端推断。</li>
-<li>能够满足实时性、安全性的要求，且能节约带宽和存储空间。</li>
-<li>智能将下沉到终端设备，智能边缘计算将会崛起。</li>
-<li><em>在计算机视觉和语义识别等应用只中，终端采集数据，然后上传到云端处理的云计算对网络带宽和数据中心存储都带来了越来越大的挑战</em></li>
-<li><em>无人驾驶等应用对实时性和安全性要求极高，网络的时延与稳定性带来的安全隐患是无人驾驶等应用无法忍受的。</em></li>
-</ul>
-
+              <p><excerpt in index | 首页摘要><br>阅读过程中的摘记。<br>
+          
       
-    </div>
+    </excerpt></p></div>
     
     <div class="article-info article-info-index">
       
@@ -536,6 +469,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2019/03/18/Deep-Learning/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -591,16 +528,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="Opencv"><a href="#Opencv" class="headerlink" title="Opencv"></a>Opencv</h2><ul>
-<li><code>ImportError: No module named cv2</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install opencv-python</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><ul>
-<li><code>根据类别划分数据集</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    <span class="meta">#</span>test datasettest_idx_0 = np.where(Y==0)test_idx_1 = np.where(Y==1)test_idx = np.append(test_idx_0,test_idx_1)X_test = X[test_idx]Y_test = Y[test_idx]    enc = OneHotEncoder(sparse=False)Y_test = enc.fit_transform(np.array(Y_test).reshape(-1,1))    <span class="meta">#</span>train and val datasettrain_val_idx = np.where(Y!=0)</span><br><span class="line">X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]train_val_idx = np.where(Y!=1)X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]<span class="meta">#</span>train and val splitX_train, X_val, Y_train, Y_val = \       train_test_split(X_train_val, Y_train_val, test_size=0.2)        Y_train = enc.fit_transform(np.array(Y_train).reshape(-1,1)) Y_val = enc.fit_transform(np.array(Y_val).reshape(-1,1))</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+              <p><excerpt in index | 首页摘要><br>一些指导！<br>
+          
       
-    </div>
+    </excerpt></p></div>
     
     <div class="article-info article-info-index">
       
@@ -611,6 +542,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2019/03/18/Instructions/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
