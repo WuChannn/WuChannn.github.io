@@ -282,6 +282,15 @@
       <time datetime="2019-05-21T13:30:12.485Z" itemprop="datePublished">2019-05-21</time>
 </a>
 
+ 
+    <a href="/2019/05/21/hello-world/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2019/05/21/hello-world/"></span>
+        
+    </a>
 
     </div>
   
@@ -342,6 +351,15 @@
       <time datetime="2019-03-22T14:02:15.000Z" itemprop="datePublished">2019-03-22</time>
 </a>
 
+ 
+    <a href="/2019/03/22/云念/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2019/03/22/云念/"></span>
+        
+    </a>
 
     </div>
   
@@ -402,6 +420,15 @@
       <time datetime="2019-03-18T11:46:05.000Z" itemprop="datePublished">2019-03-18</time>
 </a>
 
+ 
+    <a href="/2019/03/18/Deep-Learning/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2019/03/18/Deep-Learning/"></span>
+        
+    </a>
 
     </div>
   
@@ -533,6 +560,15 @@
       <time datetime="2019-03-18T11:46:05.000Z" itemprop="datePublished">2019-03-18</time>
 </a>
 
+ 
+    <a href="/2019/03/18/Instructions/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2019/03/18/Instructions/"></span>
+        
+    </a>
 
     </div>
   
@@ -651,6 +687,22 @@
 
     
 
+    
+        <script id="dsq-count-scr" src="//wuchannn.disqus.com/count.js" async></script>
+        <script>
+            if ($(".left-col").is(":visible")) {
+                var $disqusCount = $(".disqus-comment-count");
+                $disqusCount.bind("DOMNodeInserted", function(e) {
+                    var num = $(this).text().replace(/[^0-9]/ig,"");
+                    if (num > 0) {
+                        $(this).siblings(".count-comment").text(num);
+                    }
+                    $(this).remove();
+                })
+            } else {
+                $(".disqus-comment-count").remove();
+            }
+        </script>
      
 
 
