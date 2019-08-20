@@ -14,17 +14,18 @@
 <meta name="author" content="Chan Wu">
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="WuChannn">
-<meta property="og:url" content="http://wuchannn.github.io/index.html">
+<meta name="description" content="复制文件夹src到文件夹dst cp src dst解包文件 .rar: tar xvf filename.rar打包文件 .rar: tar cvf filename.rar dir">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shell">
+<meta property="og:url" content="http://wuchannn.github.io/2019/08/20/Shell/index.html">
 <meta property="og:site_name" content="WuChannn">
+<meta property="og:description" content="复制文件夹src到文件夹dst cp src dst解包文件 .rar: tar xvf filename.rar打包文件 .rar: tar cvf filename.rar dir">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-20T14:31:45.324Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WuChannn">
+<meta name="twitter:title" content="Shell">
+<meta name="twitter:description" content="复制文件夹src到文件夹dst cp src dst解包文件 .rar: tar xvf filename.rar打包文件 .rar: tar cvf filename.rar dir">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -52,13 +53,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>WuChannn</title>
+<title>Shell | WuChannn</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,8 +66,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -273,24 +272,13 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-Shell" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Shell" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2019/08/20/Shell/" class="article-date">
       <time datetime="2019-08-20T14:30:22.000Z" itemprop="datePublished">2019-08-20</time>
 </a>
 
- 
-    <a href="/2019/08/20/Shell/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2019/08/20/Shell/"></span>
-        
-    </a>
 
     </div>
   
@@ -302,12 +290,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/20/Shell/">Shell</a>
+    <h1 class="article-title" itemprop="name">
+      Shell
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -322,317 +317,101 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/05/21/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+    </nav>
+
   
 </article>
 
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/05/21/hello-world/" class="article-date">
-      <time datetime="2019-05-21T13:30:12.485Z" itemprop="datePublished">2019-05-21</time>
-</a>
-
- 
-    <a href="/2019/05/21/hello-world/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
         
+            <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#复制文件夹src到文件夹dst"><span class="toc-number">1.</span> <span class="toc-text">复制文件夹src到文件夹dst</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#解包文件"><span class="toc-number">2.</span> <span class="toc-text">解包文件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#打包文件"><span class="toc-number">3.</span> <span class="toc-text">打包文件</span></a></li></ol>
         
-            <span class="disqus-comment-count" data-disqus-identifier="2019/05/21/hello-world/"></span>
-        
-    </a>
-
     </div>
-  
-  <div class="article-inner">
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+
+
     
-      <input type="hidden" class="isFancy">
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'http://wuchannn.github.io/2019/08/20/Shell/';
+            this.page.identifier = '2019/08/20/Shell/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//wuchannn.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
     
+    <script> loadComment(); </script>
+
+</section>
+
+
     
-      <header class="article-header">
+
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p><excerpt in index | 首页摘要><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>
-          
-      
-    </excerpt></p></div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2019/05/21/hello-world/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-云念" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/03/22/云念/" class="article-date">
-      <time datetime="2019-03-22T14:02:15.000Z" itemprop="datePublished">2019-03-22</time>
-</a>
-
- 
-    <a href="/2019/03/22/云念/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2019/03/22/云念/"></span>
-        
-    </a>
 
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/22/云念/">云 念</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p><excerpt in index | 首页摘要><br>一些感悟！<br>
-          
-      
-    </excerpt></p></div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+            <a href="/2019/05/21/hello-world/" title="下一篇: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-      
-        <p class="article-more-link">
-          <a href="/2019/03/22/云念/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/20/Shell/">Shell</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/21/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/22/云念/">云 念</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/Deep-Learning/">Deep Learning</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/Instructions/">Instructions</a></li></ul>
 
 
 
 
-
-
-
-
-
-  
-    <article id="post-Deep-Learning" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/03/18/Deep-Learning/" class="article-date">
-      <time datetime="2019-03-18T11:46:05.000Z" itemprop="datePublished">2019-03-18</time>
-</a>
-
- 
-    <a href="/2019/03/18/Deep-Learning/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
+    <script>
         
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2019/03/18/Deep-Learning/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/18/Deep-Learning/">Deep Learning</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p><excerpt in index | 首页摘要><br>阅读过程中的摘记。<br>
-          
-      
-    </excerpt></p></div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/03/18/Deep-Learning/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Instructions" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/03/18/Instructions/" class="article-date">
-      <time datetime="2019-03-18T11:46:05.000Z" itemprop="datePublished">2019-03-18</time>
-</a>
-
- 
-    <a href="/2019/03/18/Instructions/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2019/03/18/Instructions/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/18/Instructions/">Instructions</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p><excerpt in index | 首页摘要><br>一些指导！<br>
-          
-      
-    </excerpt></p></div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/03/18/Instructions/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
@@ -688,26 +467,6 @@
         })
     </script>
 
-
-    
-
-    
-        <script id="dsq-count-scr" src="//wuchannn.disqus.com/count.js" async></script>
-        <script>
-            if ($(".left-col").is(":visible")) {
-                var $disqusCount = $(".disqus-comment-count");
-                $disqusCount.bind("DOMNodeInserted", function(e) {
-                    var num = $(this).text().replace(/[^0-9]/ig,"");
-                    if (num > 0) {
-                        $(this).siblings(".count-comment").text(num);
-                    }
-                    $(this).remove();
-                })
-            } else {
-                $(".disqus-comment-count").remove();
-            }
-        </script>
-     
 
 
 

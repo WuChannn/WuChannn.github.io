@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Shell</title>
+      <link href="/2019/08/20/Shell/"/>
+      <url>/2019/08/20/Shell/</url>
+      
+        <content type="html"><![CDATA[<h6 id="复制文件夹src到文件夹dst"><a href="#复制文件夹src到文件夹dst" class="headerlink" title="复制文件夹src到文件夹dst"></a>复制文件夹src到文件夹dst</h6><ul><li>cp src dst<h6 id="解包文件"><a href="#解包文件" class="headerlink" title="解包文件"></a>解包文件</h6></li><li>.rar: tar xvf filename.rar<h6 id="打包文件"><a href="#打包文件" class="headerlink" title="打包文件"></a>打包文件</h6></li><li>.rar: tar cvf filename.rar dir</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2019/05/21/hello-world/"/>
       <url>/2019/05/21/hello-world/</url>
