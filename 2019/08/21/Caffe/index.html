@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="一些指导！">
-<meta name="keywords" content="学习">
+<meta name="description" content="记录Caffe实践过程中遇到的问题。">
+<meta name="keywords" content="Caffe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Instructions">
-<meta property="og:url" content="http://wuchannn.github.io/2019/03/18/Instructions/index.html">
+<meta property="og:title" content="Caffe">
+<meta property="og:url" content="http://wuchannn.github.io/2019/08/21/Caffe/index.html">
 <meta property="og:site_name" content="WuChannn">
-<meta property="og:description" content="一些指导！">
+<meta property="og:description" content="记录Caffe实践过程中遇到的问题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-27T04:11:18.152Z">
+<meta property="og:updated_time" content="2019-08-21T08:30:54.261Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Instructions">
-<meta name="twitter:description" content="一些指导！">
+<meta name="twitter:title" content="Caffe">
+<meta name="twitter:description" content="记录Caffe实践过程中遇到的问题。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Instructions | WuChannn</title>
+<title>Caffe | WuChannn</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -194,7 +194,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Caffe/">Caffe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
                     </div>
                 </section>
                 
@@ -273,11 +273,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-Instructions" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Caffe" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/03/18/Instructions/" class="article-date">
-      <time datetime="2019-03-18T11:46:05.000Z" itemprop="datePublished">2019-03-18</time>
+      <a href="/2019/08/21/Caffe/" class="article-date">
+      <time datetime="2019-08-21T07:29:52.000Z" itemprop="datePublished">2019-08-21</time>
 </a>
 
 
@@ -292,7 +292,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Instructions
+      Caffe
     </h1>
   
 
@@ -303,7 +303,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Caffe/">Caffe</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -313,16 +313,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in index | 首页摘要><br>一些指导！<br><a id="more"></a></excerpt></p>
+        <p><excerpt in index | 首页摘要><br>记录Caffe实践过程中遇到的问题。<br><a id="more"></a></excerpt></p>
 <the rest of contents | 余下全文>
 
-<h2 id="Opencv"><a href="#Opencv" class="headerlink" title="Opencv"></a>Opencv</h2><ul>
-<li><code>ImportError: No module named cv2</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install opencv-python</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="Errors"><a href="#Errors" class="headerlink" title="Errors"></a>Errors</h2><p>1.将mnist压缩包用工具解压后运行creat_mnist.sh，运行失败，提示无法打开数据：</p>
+<ul>
+<li>原因是工具解压后的数据caffe无法识别（自动创建了一个未知数据类型），参考data/get_mnist.sh后发现应该用gunzip {filename}.gz，该解压方式解压得到二进制文件。</li>
 </ul>
-<h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><ul>
-<li><code>根据类别划分数据集</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = np.reshape(X, (50000,3,32,32)).transpose(0,2,3,1)X = np.array(X)Y = np.array(Y)    <span class="meta">#</span>test datasettest_idx_0 = np.where(Y==0)test_idx_1 = np.where(Y==1)test_idx = np.append(test_idx_0,test_idx_1)X_test = X[test_idx]Y_test = Y[test_idx]    enc = OneHotEncoder(sparse=False)Y_test = enc.fit_transform(np.array(Y_test).reshape(-1,1))    <span class="meta">#</span>train and val datasettrain_val_idx = np.where(Y!=0)</span><br><span class="line">X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]train_val_idx = np.where(Y!=1)X_train_val = X[train_val_idx]Y_train_val = Y[train_val_idx]<span class="meta">#</span>train and val splitX_train, X_val, Y_train, Y_val = \       train_test_split(X_train_val, Y_train_val, test_size=0.2)        Y_train = enc.fit_transform(np.array(Y_train).reshape(-1,1)) Y_val = enc.fit_transform(np.array(Y_val).reshape(-1,1))</span><br></pre></td></tr></table></figure></li>
-</ul>
+<ol start="2">
+<li><code>ImportError: No module named cv2</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install opencv-python</span><br></pre></td></tr></table></figure></li>
+</ol>
 </the>
       
     </div>
@@ -335,15 +335,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/03/22/云念/">
-                    云 念
+                <a href="/2019/08/21/Python/">
+                    Python
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/03/18/Deep-Learning/">
-                    Deep Learning
+                <a href="/2019/03/22/云念/">
+                    云 念
                 </a>
             </div>
         
@@ -355,7 +355,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Opencv"><span class="toc-number">1.</span> <span class="toc-text">Opencv</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Numpy"><span class="toc-number">2.</span> <span class="toc-text">Numpy</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Errors"><span class="toc-number">1.</span> <span class="toc-text">Errors</span></a></li></ol>
         
     </div>
     <style>
@@ -385,8 +385,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://wuchannn.github.io/2019/03/18/Instructions/';
-            this.page.identifier = '2019/03/18/Instructions/';
+            this.page.url = 'http://wuchannn.github.io/2019/08/21/Caffe/';
+            this.page.identifier = '2019/08/21/Caffe/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -408,7 +408,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/03/22/云念/" title="上一篇: 云 念">
+            <a href="/2019/08/21/Python/" title="上一篇: Python">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -416,13 +416,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/03/18/Deep-Learning/" title="下一篇: Deep Learning">
+            <a href="/2019/03/22/云念/" title="下一篇: 云 念">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/20/Shell/">Shell</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/21/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/22/云念/">云 念</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/Instructions/">Instructions</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/Deep-Learning/">Deep Learning</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/21/Python/">Python</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/21/Caffe/">Caffe</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/22/云念/">云 念</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/Deep-Learning/">Deep Learning</a></li></ul>
 
 
 
