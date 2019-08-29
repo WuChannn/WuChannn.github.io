@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="一些感悟！">
-<meta name="keywords" content="感悟">
+<meta name="description" content="记录有关OpenCV的基础知识。">
+<meta name="keywords" content="OpenCV基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="云 念">
-<meta property="og:url" content="http://wuchannn.github.io/2019/03/22/云念/index.html">
+<meta property="og:title" content="OpenCV">
+<meta property="og:url" content="http://wuchannn.github.io/2019/08/28/OpenCV/index.html">
 <meta property="og:site_name" content="WuChannn">
-<meta property="og:description" content="一些感悟！">
+<meta property="og:description" content="记录有关OpenCV的基础知识。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-22T12:45:07.250Z">
+<meta property="og:updated_time" content="2019-08-29T06:05:23.661Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="云 念">
-<meta name="twitter:description" content="一些感悟！">
+<meta name="twitter:title" content="OpenCV">
+<meta name="twitter:description" content="记录有关OpenCV的基础知识。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>云 念 | WuChannn</title>
+<title>OpenCV | WuChannn</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -273,11 +273,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-云念" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-OpenCV" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/03/22/云念/" class="article-date">
-      <time datetime="2019-03-22T14:02:15.000Z" itemprop="datePublished">2019-03-22</time>
+      <a href="/2019/08/28/OpenCV/" class="article-date">
+      <time datetime="2019-08-28T01:49:10.000Z" itemprop="datePublished">2019-08-28</time>
 </a>
 
 
@@ -292,7 +292,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      云 念
+      OpenCV
     </h1>
   
 
@@ -301,13 +301,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+    <a class="article-category-link" href="/categories/项目/">项目</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/感悟/">感悟</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenCV基础/">OpenCV基础</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -317,11 +317,40 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in index | 首页摘要><br>一些感悟！<br><a id="more"></a></excerpt></p>
+        <p><excerpt in index | 首页摘要><br>记录有关OpenCV的基础知识。<br><a id="more"></a></excerpt></p>
 <the rest of contents | 余下全文>
 
-<p>2019-3-22<br>  回来的车上，我一直在想，如果当年追着那个小女孩的老头真的是人贩子的话，我想我会后悔一生。“应该不是吧，这么久也没有听说过有人贩子在大学城出没。”我就这样麻醉自己，利用自己的闭塞的消息通道来劝慰自己。我知道这句话经不起推敲，毕竟真正的黑暗是摆在我们普通人的眼前，我们依然会被它的深邃所迷惑。我只有祈祷，祈祷这个世界变得更加美好；我只有祈祷，祈祷下次再遇见类似事件时，自己能够有勇气摒弃路人冷眼旁观时的说辞，鼓起勇气弄清真相。</p>
-</the>
+<h3 id="提取Mat矩阵的感兴趣区域"><a href="#提取Mat矩阵的感兴趣区域" class="headerlink" title="提取Mat矩阵的感兴趣区域"></a>提取Mat矩阵的感兴趣区域</h3><ul>
+<li>使用构造函数,如下例所示:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//创建宽度为 320,高度为 240 的 3 通道图像</span><br><span class="line">Mat img(Size(320,240),CV_8UC3);</span><br><span class="line">//roi 是表示 img 中 Rect(10,10,100,100)区域的对象</span><br><span class="line">Mat roi(img, Rect(10,10,100,100));</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用括号运算符,如下:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mat roi = img(Rect(10,10,100,100));</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 Range 对象来定义感兴趣区域,如下:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//使用括号运算符</span><br><span class="line">Mat roi = img(Range(10,100),Range(10,100));</span><br><span class="line">//使用构造函数</span><br><span class="line">Mat roi(img, Range(10,100),Range(10,100));</span><br></pre></td></tr></table></figure>
+<h3 id="Mat矩阵的合并与图像的拼接"><a href="#Mat矩阵的合并与图像的拼接" class="headerlink" title="Mat矩阵的合并与图像的拼接"></a>Mat矩阵的合并与图像的拼接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- vconcat（B,C，A）; // 等同于A=[B ;C]</span><br><span class="line">- hconcat（B,C，A）; // 等同于A=[B  C]</span><br></pre></td></tr></table></figure>
+<h3 id="复制Mat对象"><a href="#复制Mat对象" class="headerlink" title="复制Mat对象"></a>复制Mat对象</h3><h4 id="部分复制"><a href="#部分复制" class="headerlink" title="部分复制"></a>部分复制</h4><p>该类方法不会复制Mat对象的数据部分(即指针指向的矩阵)，只会复制它的头(包括矩阵的尺寸/存储方法/存储地址等信息)和指针部分(指向存储所有像素值的矩阵)。</p>
+<ul>
+<li>方法1：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mat B(A);//B是A的部分复制</span><br></pre></td></tr></table></figure>
+<ul>
+<li>方法2(创建与Mat对象大小，类型相同的复制图像(数据可以自行设置))：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Mat B;</span><br><span class="line">B.create(A.size(), A.type());</span><br></pre></td></tr></table></figure>
+<h4 id="完全复制-构造完全拷贝图像"><a href="#完全复制-构造完全拷贝图像" class="headerlink" title="完全复制(构造完全拷贝图像)"></a>完全复制(构造完全拷贝图像)</h4><p>注意：<br>(1) 不要直接对源图像操作，要先构造一个源图像的完全拷贝图像。<br>(2) 完全复制：把Mat对象的头部和数据部分一起复制。</p>
+<ul>
+<li>方法1：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mat B = A.clone();</span><br></pre></td></tr></table></figure>
+<ul>
+<li>方法2：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Mat B;</span><br><span class="line">A.copyTo(B);</span><br></pre></td></tr></table></figure></the>
       
     </div>
     
@@ -332,16 +361,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/08/21/Caffe/">
-                    Caffe
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/03/18/Deep-Learning/">
-                    Deep Learning
+                <a href="/2019/08/23/C/">
+                    C++
                 </a>
             </div>
         
@@ -353,7 +376,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#提取Mat矩阵的感兴趣区域"><span class="toc-number">1.</span> <span class="toc-text">提取Mat矩阵的感兴趣区域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mat矩阵的合并与图像的拼接"><span class="toc-number">2.</span> <span class="toc-text">Mat矩阵的合并与图像的拼接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复制Mat对象"><span class="toc-number">3.</span> <span class="toc-text">复制Mat对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#部分复制"><span class="toc-number">3.1.</span> <span class="toc-text">部分复制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#完全复制-构造完全拷贝图像"><span class="toc-number">3.2.</span> <span class="toc-text">完全复制(构造完全拷贝图像)</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -383,8 +406,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://wuchannn.github.io/2019/03/22/云念/';
-            this.page.identifier = '2019/03/22/云念/';
+            this.page.url = 'http://wuchannn.github.io/2019/08/28/OpenCV/';
+            this.page.identifier = '2019/08/28/OpenCV/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -406,15 +429,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/08/21/Caffe/" title="上一篇: Caffe">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/03/18/Deep-Learning/" title="下一篇: Deep Learning">
+            <a href="/2019/08/23/C/" title="下一篇: C++">
                 <i class="fa fa-angle-right"></i>
             </a>
         
