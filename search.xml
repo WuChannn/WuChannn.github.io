@@ -80,8 +80,8 @@
     
     <entry>
       <title>C++</title>
-      <link href="/2019/08/23/C++/"/>
-      <url>/2019/08/23/C++/</url>
+      <link href="/2019/08/23/C/"/>
+      <url>/2019/08/23/C/</url>
       
         <content type="html"><![CDATA[<p><excerpt in index | 首页摘要><br>一些记录！<br><a id="more"></a></excerpt></p><the rest of contents | 余下全文><p>在学习C++的过程中我们经常会用到.和::和：和-&gt;，在此整理一下这些常用符号的区别。 </p><pre><code>1、A.B则A为对象或者结构体；2、A-&gt;B则A为指针，-&gt;是成员提取，A-&gt;B是提取A中的成员B，A只能是指向类、结构、联合的指针；3、::是作用域运算符，A::B表示作用域A中的名称B，A可以是名字空间、类、结构；4、：一般用来表示继承；</code></pre><p>缺省值（quē shěng zhí）就是默认值。是指一个属性、参数在被修改前的初始值。<br>计算机软件系统要求用户输入某些值而用户未给定时，系统自动赋予的事先设定的数值</p><h3 id="malloc"><a href="#malloc" class="headerlink" title="malloc"></a>malloc</h3><ul><li>malloc(sizeof(int)*num): num为需要保存的int类型的数，sizeof(int)为int类型数据占据的字节数</li></ul></the>]]></content>
       
