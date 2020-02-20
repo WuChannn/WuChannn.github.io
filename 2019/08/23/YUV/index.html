@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://static.oschina.net/uploads/img/201412/08141454_ACE9.jpg">
 <meta property="og:image" content="http://notes.maxwi.com/2017/12/05/yuv/yuv4.png">
 <meta property="og:image" content="http://notes.maxwi.com/2017/12/05/yuv/yuv5.png">
-<meta property="og:updated_time" content="2019-08-29T08:40:15.096Z">
+<meta property="og:updated_time" content="2019-09-05T06:56:08.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="YUV">
 <meta name="twitter:description" content="记录有关YUV的基础知识。">
@@ -198,7 +198,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Caffe/">Caffe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Error/">Error</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV基础/">OpenCV基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Skill/">Skill</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/YUV基础/">YUV基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感悟/">感悟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/记录/">记录</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Caffe/">Caffe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Errors/">Errors</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV基础/">OpenCV基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Skill/">Skill</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/YUV基础/">YUV基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感悟/">感悟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/记录/">记录</a></li></ul>
                     </div>
                 </section>
                 
@@ -332,7 +332,7 @@
 <li>YUV 4:2:2采样，每两个Y共用一组UV分量。 </li>
 <li>YUV 4:2:0采样，每四个Y共用一组UV分量。</li>
 </ul>
-<p><table><tr><td><center><img src="https://static.oschina.net/uploads/img/201412/08141454_ACE9.jpg"><br>YUV采样示意图</center></td></tr></table></p>
+<p><table><tr><td><center><img src="https://static.oschina.net/uploads/img/201412/08141454_ACE9.jpg" alt="YUV采样示意图"><br>YUV采样示意图</center></td></tr></table></p>
 <h3 id="存储格式"><a href="#存储格式" class="headerlink" title="存储格式"></a>存储格式</h3><p>两大类：planar和packed。<br>YUV formats fall into two distinct groups, the packed formats where Y, U (Cb) and V (Cr) samples are packed together into macropixels which are stored in a single array, and the planar formats where each component is stored as a separate array, the final image being a fusing of the three separate planes.(plane not channel!)</p>
 <ul>
 <li>对于planar的YUV格式，使用三个数组分开存放YUV三个分量，每个数组分别存储所有像素点的Y、U、V分量。先连续存储所有像素点的Y，紧接着存储所有像素点的U，随后是所有像素点的V。</li>
@@ -364,8 +364,8 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/08/23/C/">
-                    C++
+                <a href="/2019/08/23/Linux/">
+                    Linux
                 </a>
             </div>
         
@@ -392,8 +392,8 @@
         .left-col .switch-area {
             display: none;
         }
-        .toc-level-3 i,
-        .toc-level-3 ol {
+        .toc-level-4 i,
+        .toc-level-4 ol {
             display: none !important;
         }
     </style>
@@ -437,7 +437,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/08/23/C/" title="上一篇: C++">
+            <a href="/2019/08/23/Linux/" title="上一篇: Linux">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -451,7 +451,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/28/OpenCV/">OpenCV</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/23/C/">C++</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/23/YUV/">YUV</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/21/Python/">Python</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/21/Caffe/">Caffe</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/22/云念/">云 念</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/Deep-Learning/">Deep Learning</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/30/CUDA/">CUDA</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/07/Errors/">Errors</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/28/OpenCV/">OpenCV</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/23/C++/">C++</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/23/Linux/">Linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/23/YUV/">YUV</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/21/Python/">Python</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/21/Caffe/">Caffe</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/22/云念/">云 念</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/Deep-Learning/">Deep Learning</a></li></ul>
 
 
 
@@ -465,7 +465,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2019 Chan Wu
+                2019-2020 Chan Wu
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
